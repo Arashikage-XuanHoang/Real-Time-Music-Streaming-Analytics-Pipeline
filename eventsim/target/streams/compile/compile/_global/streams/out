@@ -1,0 +1,9 @@
+[0m[[0m[33mwarn[0m] [0m[0m/mnt/0498342198341420/UIT_DS_Third_Year_2025_2026/BigData_self_learning/My_First_Project/eventsim/src/main/scala/io/confluent/eventsim/Output.scala:49:37: non-variable type argument Object in type pattern io.confluent.eventsim.events.AvroConstructor[Object] is unchecked since it is eliminated by erasure[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0m          case constructor1: events.AvroConstructor[Object] => constructor1.serialize(constructor.end())[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0m                                    ^[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0mthere were 12 deprecation warnings (since 1.0.2)[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0mthere was one deprecation warning (since 1.0.6)[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0mthere were 8 deprecation warnings (since 2.12.0)[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0mthere were 21 deprecation warnings in total; re-run with -deprecation for details[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0mthere were four feature warnings; re-run with -feature for details[0m[0J
+[0m[[0m[33mwarn[0m] [0m[0m6 warnings found[0m[0J
