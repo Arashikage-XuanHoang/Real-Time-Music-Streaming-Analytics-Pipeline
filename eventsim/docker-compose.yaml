@@ -126,6 +126,115 @@ services:
       timeout: 10s
       retries: 10
       start_period: 60s
+  spark-master:
+    image: apache/spark:3.5.0
+    container_name: spark-master
+    hostname: spark-master
+    ports:
+      - "8080:8080"
+      - "7077:7077"
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master
+    volumes:
+      - ./data:/home/jovyan/work/data
+      - ./apps:/home/jovyan/work/apps
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  spark-worker-1:
+    image: apache/spark:3.5.0
+    container_name: spark-worker-1
+    hostname: spark-worker-1
+    depends_on:
+      spark-master:
+        condition: service_healthy
+    environment:
+      - SPARK_WORKER_CORES=4
+      - SPARK_WORKER_MEMORY=4g
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    volumes:
+      - ./data:/home/jovyan/work/data
+      - ./apps:/home/jovyan/work/apps
+
+  spark-worker-2:
+    image: apache/spark:3.5.0
+    container_name: spark-worker-2
+    hostname: spark-worker-2
+    depends_on:
+      spark-master:
+        condition: service_healthy
+    environment:
+      - SPARK_WORKER_CORES=4
+      - SPARK_WORKER_MEMORY=4g
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    volumes:
+      - ./data:/home/jovyan/work/data
+      - ./apps:/home/jovyan/work/apps
+
+  jupyter-spark:
+    image: quay.io/jupyter/all-spark-notebook:spark-3.5.0
+    container_name: jupyter-spark
+    user: root
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+    volumes:
+      - ./apps:/home/jovyan/work/apps
+      - ./data:/home/jovyan/work/data
+    environment:
+      - SPARK_MASTER=spark://spark-master:7077
+      - JUPYTER_ENABLE_LAB=yes
+      - GRANT_SUDO=yes
+    depends_on:
+      spark-master:
+        condition: service_healthy
+    command: >
+      jupyter lab
+      --ip=0.0.0.0
+      --port=8888
+      --no-browser
+      --allow-root
+      --NotebookApp.token=''
+      --NotebookApp.password=''
+      --NotebookApp.allow_origin='*'
+
+  db:
+    image: postgres:17.6
+    container_name: postgres-db
+    ports:
+      - '5433:5432'
+    environment:
+      POSTGRES_USER: sqlpad
+      POSTGRES_PASSWORD: sqlpad
+      POSTGRES_DB: sqlpad
+
+  sqlpad:
+    image: sqlpad/sqlpad:5
+    hostname: sqlpad
+    container_name: sqlpad
+    ports:
+      - '3000:3000'
+    environment:
+      SQLPAD_ADMIN: 'admin@sqlpad.com'
+      SQLPAD_ADMIN_PASSWORD: 'admin'
+      SQLPAD_APP_LOG_LEVEL: debug
+      SQLPAD_WEB_LOG_LEVEL: warn
+      SQLPAD_SEED_DATA_PATH: /etc/sqlpad/seed-data
+      SQLPAD_CONNECTIONS__pgdemo__name: Postgres
+      SQLPAD_CONNECTIONS__pgdemo__driver: postgres
+      SQLPAD_CONNECTIONS__pgdemo__host: postgres-db
+      SQLPAD_CONNECTIONS__pgdemo__database: sqlpad
+      SQLPAD_CONNECTIONS__pgdemo__username: sqlpad
+      SQLPAD_CONNECTIONS__pgdemo__password: sqlpad
+      SQLPAD_CONNECTIONS__pgdemo__multiStatementTransactionEnabled: 'true'
+      SQLPAD_CONNECTIONS__pgdemo__idleTimeoutSeconds: 86400
+    volumes:
+      - ./seed-data:/etc/sqlpad/seed-data
+    depends_on:
+      - db
+
 networks:
   default:
     name: eventsim-network
