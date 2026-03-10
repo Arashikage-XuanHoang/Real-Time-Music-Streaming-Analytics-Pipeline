@@ -25,7 +25,7 @@ services:
 
       --nusers 100
       --growth-rate 1
-      --start-time 2020-03-01T00:00:00
+      --start-time 2026-03-01T00:00:00
       --end-time 2026-03-10T00:00:00
       --userid 1
       --randomseed 1
@@ -49,6 +49,11 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_LOG_RETENTION_HOURS: 24
+      KAFKA_LOG_SEGMENT_BYTES: 1073741824
+      KAFKA_LOG_RETENTION_BYTES: 1073741824
+    volumes:
+      - kafka-data:/home/xuanhoang/docker/volumes/eventsim_kafka-data/_data
     healthcheck:
       test: ["CMD-SHELL", "kafka-topics --bootstrap-server localhost:9092 --list > /dev/null 2>&1"]
       interval: 30s
@@ -58,3 +63,6 @@ services:
 networks:
   default:
     name: eventsim-network
+
+volumes:
+  kafka-data:
