@@ -6,17 +6,24 @@ services:
     container_name: eventsim_generator
     # network_mode: host
     restart: unless-stopped
-    mem_limit: 6g
-    cpus: 6
-    memswap_limit: 10g
+    mem_limit: 5g
+    cpus: 5
+    memswap_limit: 5g
 
     volumes:
       - ./data:/opt/eventsim/data
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -f eventsim || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
 
     command: >-
       -c examples/example-config.json
-      --continuous
-      --nusers 1000
+      --kafkaBrokerList kafka:9092
+
+      --nusers 100
       --growth-rate 1
       --start-time 2020-03-01T00:00:00
       --end-time 2026-03-10T00:00:00
@@ -42,6 +49,12 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    healthcheck:
+      test: ["CMD-SHELL", "kafka-topics --bootstrap-server localhost:9092 --list > /dev/null 2>&1"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
 networks:
   default:
     name: eventsim-network

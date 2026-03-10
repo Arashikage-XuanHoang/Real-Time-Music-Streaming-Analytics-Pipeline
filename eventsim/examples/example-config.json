@@ -1,5 +1,5 @@
 {"seed" : 1,
- "alpha" : 90.0,
+ "alpha" : 10.0,
  "beta" : 604800.0,
  "damping" : 0.09375,
  "weekend-damping" : 0.5,
@@ -641,10 +641,5 @@
         {"source":{"page":"Error","method":"GET","status":404,"auth":"Logged Out","level":"paid"},
            "dest":{"page":"Error","method":"GET","status":404,"auth":"Logged Out","level":"paid"},
            "p":0.01}
-  ],
-      "kafka": {
-      "enabled": true,
-      "brokers": "kafka:9092",
-      "topic": "eventsim"
-      }
+  ]
  }
