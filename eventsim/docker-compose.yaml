@@ -4,9 +4,10 @@ services:
       context: .
       dockerfile: docker/Dockerfile
     container_name: eventsim_generator
-    network_mode: host
+    # network_mode: host
     restart: unless-stopped
-    mem_limit: 10g
+    mem_limit: 6g
+    cpus: 6
     memswap_limit: 10g
 
     volumes:
@@ -31,12 +32,16 @@ services:
       - "9092:9092"
 
     environment:
+      CLUSTER_ID: exbDrwnPTlqim7-51SwxYw
+
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: broker,controller
       KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
 
       KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
-
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+networks:
+  default:
+    name: eventsim-network
