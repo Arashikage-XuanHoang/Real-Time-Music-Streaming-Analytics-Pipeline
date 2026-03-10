@@ -5,7 +5,7 @@ services:
       dockerfile: docker/Dockerfile
     container_name: eventsim_generator
     # network_mode: host
-    restart: unless-stopped
+    restart: "no"
     mem_limit: 5g
     cpus: 5
     memswap_limit: 5g
