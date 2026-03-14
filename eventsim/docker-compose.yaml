@@ -45,7 +45,7 @@ services:
       - "9092:9092"
 
     environment:
-      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
       CLUSTER_ID: exbDrwnPTlqim7-51SwxYw
 
       KAFKA_NODE_ID: 1
@@ -77,7 +77,7 @@ services:
     ports:
       - "9093:9092"
     environment:
-      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
       CLUSTER_ID: exbDrwnPTlqim7-51SwxYw
       KAFKA_NODE_ID: 2
       KAFKA_PROCESS_ROLES: broker,controller
@@ -107,7 +107,7 @@ services:
     ports:
       - "9094:9092"
     environment:
-      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
       CLUSTER_ID: exbDrwnPTlqim7-51SwxYw
       KAFKA_NODE_ID: 3
       KAFKA_PROCESS_ROLES: broker,controller
@@ -131,7 +131,9 @@ services:
       retries: 10
       start_period: 60s
   spark-master:
-    image: apache/spark:3.5.0
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.spark
     container_name: spark-master
     hostname: spark-master
     ports:
@@ -152,7 +154,9 @@ services:
       retries: 5
 
   spark-worker-1:
-    image: apache/spark:3.5.0
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.spark
     container_name: spark-worker-1
     hostname: spark-worker-1
     depends_on:
@@ -167,7 +171,9 @@ services:
       - ./apps:/home/jovyan/work/apps
 
   spark-worker-2:
-    image: apache/spark:3.5.0
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.spark
     container_name: spark-worker-2
     hostname: spark-worker-2
     depends_on:
@@ -182,7 +188,9 @@ services:
       - ./apps:/home/jovyan/work/apps
 
   jupyter-spark:
-    image: quay.io/jupyter/all-spark-notebook:spark-3.5.0
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.jupyter
     container_name: jupyter-spark
     user: root
     ports:
