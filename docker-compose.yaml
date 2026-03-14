@@ -1,17 +1,17 @@
 services:
   eventsim:
     build:
-      context: .
+      context: ./eventsim 
       dockerfile: docker/Dockerfile
     container_name: eventsim_generator
     # network_mode: host
     restart: "no"
-    mem_limit: 3g
+    mem_limit: 4g
     cpus: 5
-    memswap_limit: 3g
+    memswap_limit: 4g
 
     volumes:
-      - ./data:/opt/eventsim/data
+      - ./eventsim/data:/opt/eventsim/data
     healthcheck:
       test: ["CMD-SHELL", "pgrep -f eventsim || exit 1"]
       interval: 30s
@@ -22,7 +22,7 @@ services:
     command: >-
       -c examples/example-config.json
       --kafkaBrokerList kafka1:9092,kafka2:9092,kafka3:9092
-      --nusers 100
+      --nusers 5000
       --growth-rate 1
       --userid 1
       --continuous 
@@ -132,8 +132,8 @@ services:
       start_period: 60s
   spark-master:
     build:
-      context: .
-      dockerfile: docker/Dockerfile.spark
+      context: ./eventsim
+      dockerfile: ../docker/Dockerfile.spark
     container_name: spark-master
     hostname: spark-master
     ports:
@@ -155,8 +155,8 @@ services:
 
   spark-worker-1:
     build:
-      context: .
-      dockerfile: docker/Dockerfile.spark
+      context: ./eventsim
+      dockerfile: ../docker/Dockerfile.spark
     container_name: spark-worker-1
     hostname: spark-worker-1
     depends_on:
@@ -172,8 +172,8 @@ services:
 
   spark-worker-2:
     build:
-      context: .
-      dockerfile: docker/Dockerfile.spark
+      context: ./eventsim
+      dockerfile: ../docker/Dockerfile.spark
     container_name: spark-worker-2
     hostname: spark-worker-2
     depends_on:
@@ -189,8 +189,8 @@ services:
 
   jupyter-spark:
     build:
-      context: .
-      dockerfile: docker/Dockerfile.jupyter
+      context: ./eventsim
+      dockerfile: ../docker/Dockerfile.jupyter
     container_name: jupyter-spark
     user: root
     ports:
