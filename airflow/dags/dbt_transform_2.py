@@ -10,9 +10,9 @@ default_args = {
 }
 
 with DAG(
-    dag_id="dbt_transform",
-    description="Transform raw → gold using dbt",
-    schedule_interval="@hourly",
+    dag_id="dbt_raw_to_gold",
+    description="Transform raw → gold using dbtkk",
+    schedule_interval="* * * * *",
     start_date=datetime(2026, 1, 1),
     catchup=False,
     default_args=default_args,
