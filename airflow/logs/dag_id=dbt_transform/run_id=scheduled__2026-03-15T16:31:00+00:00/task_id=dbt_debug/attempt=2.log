@@ -1,0 +1,74 @@
+[2026-03-15T16:37:04.781+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-15T16:37:04.808+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_transform.dbt_debug scheduled__2026-03-15T16:31:00+00:00 [queued]>
+[2026-03-15T16:37:04.814+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_transform.dbt_debug scheduled__2026-03-15T16:31:00+00:00 [queued]>
+[2026-03-15T16:37:04.814+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 2
+[2026-03-15T16:37:04.823+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_debug> on 2026-03-15 16:31:00+00:00
+[2026-03-15T16:37:04.831+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dbt_transform', 'dbt_debug', 'scheduled__2026-03-15T16:31:00+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/dbt_transform.py', '--cfg-path', '/tmp/tmpukdw84io']
+[2026-03-15T16:37:04.833+0000] {standard_task_runner.py:91} INFO - Job 32: Subtask dbt_debug
+[2026-03-15T16:37:04.833+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=543) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-15T16:37:04.834+0000] {standard_task_runner.py:63} INFO - Started process 544 to run task
+[2026-03-15T16:37:04.870+0000] {task_command.py:426} INFO - Running <TaskInstance: dbt_transform.dbt_debug scheduled__2026-03-15T16:31:00+00:00 [running]> on host 1442dacb8816
+[2026-03-15T16:37:04.936+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dbt_transform' AIRFLOW_CTX_TASK_ID='dbt_debug' AIRFLOW_CTX_EXECUTION_DATE='2026-03-15T16:31:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-15T16:31:00+00:00'
+[2026-03-15T16:37:04.937+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-15T16:37:04.946+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-15T16:37:04.946+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt && dbt debug --profiles-dir .']
+[2026-03-15T16:37:04.958+0000] {subprocess.py:86} INFO - Output:
+[2026-03-15T16:37:07.285+0000] {subprocess.py:93} INFO - [0m16:37:07  Running with dbt=1.7.0
+[2026-03-15T16:37:07.286+0000] {subprocess.py:93} INFO - [0m16:37:07  dbt version: 1.7.0
+[2026-03-15T16:37:07.286+0000] {subprocess.py:93} INFO - [0m16:37:07  python version: 3.12.2
+[2026-03-15T16:37:07.287+0000] {subprocess.py:93} INFO - [0m16:37:07  python path: /home/***/.local/bin/python
+[2026-03-15T16:37:07.287+0000] {subprocess.py:93} INFO - [0m16:37:07  os info: Linux-6.17.0-19-generic-x86_64-with-glibc2.36
+[2026-03-15T16:37:07.369+0000] {subprocess.py:93} INFO - [0m16:37:07  Using profiles dir at .
+[2026-03-15T16:37:07.370+0000] {subprocess.py:93} INFO - [0m16:37:07  Using profiles.yml file at ./profiles.yml
+[2026-03-15T16:37:07.370+0000] {subprocess.py:93} INFO - [0m16:37:07  Using dbt_project.yml file at /opt/***/dbt/dbt_project.yml
+[2026-03-15T16:37:07.371+0000] {subprocess.py:93} INFO - [0m16:37:07  adapter type: postgres
+[2026-03-15T16:37:07.371+0000] {subprocess.py:93} INFO - [0m16:37:07  adapter version: 1.7.0
+[2026-03-15T16:37:07.442+0000] {subprocess.py:93} INFO - [0m16:37:07  Configuration:
+[2026-03-15T16:37:07.443+0000] {subprocess.py:93} INFO - [0m16:37:07    profiles.yml file [[32mOK found and valid[0m]
+[2026-03-15T16:37:07.443+0000] {subprocess.py:93} INFO - [0m16:37:07    dbt_project.yml file [[32mOK found and valid[0m]
+[2026-03-15T16:37:07.444+0000] {subprocess.py:93} INFO - [0m16:37:07  Required dependencies:
+[2026-03-15T16:37:07.445+0000] {subprocess.py:93} INFO - [0m16:37:07   - git [[31mERROR[0m]
+[2026-03-15T16:37:07.446+0000] {subprocess.py:93} INFO - 
+[2026-03-15T16:37:07.446+0000] {subprocess.py:93} INFO - [0m16:37:07  Connection:
+[2026-03-15T16:37:07.446+0000] {subprocess.py:93} INFO - [0m16:37:07    host: postgres-db
+[2026-03-15T16:37:07.447+0000] {subprocess.py:93} INFO - [0m16:37:07    port: 5432
+[2026-03-15T16:37:07.447+0000] {subprocess.py:93} INFO - [0m16:37:07    user: sqlpad
+[2026-03-15T16:37:07.448+0000] {subprocess.py:93} INFO - [0m16:37:07    database: sqlpad
+[2026-03-15T16:37:07.448+0000] {subprocess.py:93} INFO - [0m16:37:07    schema: gold
+[2026-03-15T16:37:07.448+0000] {subprocess.py:93} INFO - [0m16:37:07    connect_timeout: 10
+[2026-03-15T16:37:07.449+0000] {subprocess.py:93} INFO - [0m16:37:07    role: None
+[2026-03-15T16:37:07.449+0000] {subprocess.py:93} INFO - [0m16:37:07    search_path: None
+[2026-03-15T16:37:07.450+0000] {subprocess.py:93} INFO - [0m16:37:07    keepalives_idle: 0
+[2026-03-15T16:37:07.450+0000] {subprocess.py:93} INFO - [0m16:37:07    sslmode: None
+[2026-03-15T16:37:07.450+0000] {subprocess.py:93} INFO - [0m16:37:07    sslcert: None
+[2026-03-15T16:37:07.451+0000] {subprocess.py:93} INFO - [0m16:37:07    sslkey: None
+[2026-03-15T16:37:07.451+0000] {subprocess.py:93} INFO - [0m16:37:07    sslrootcert: None
+[2026-03-15T16:37:07.452+0000] {subprocess.py:93} INFO - [0m16:37:07    application_name: dbt
+[2026-03-15T16:37:07.452+0000] {subprocess.py:93} INFO - [0m16:37:07    retries: 1
+[2026-03-15T16:37:07.453+0000] {subprocess.py:93} INFO - [0m16:37:07  Registered adapter: postgres=1.7.0
+[2026-03-15T16:37:07.462+0000] {subprocess.py:93} INFO - [0m16:37:07    Connection test: [[32mOK connection ok[0m]
+[2026-03-15T16:37:07.462+0000] {subprocess.py:93} INFO - 
+[2026-03-15T16:37:07.463+0000] {subprocess.py:93} INFO - [0m16:37:07  [31m1 check failed:[0m
+[2026-03-15T16:37:07.463+0000] {subprocess.py:93} INFO - [0m16:37:07  Error from git --help: User does not have permissions for this command: "git"
+[2026-03-15T16:37:07.463+0000] {subprocess.py:93} INFO - 
+[2026-03-15T16:37:08.908+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-03-15T16:37:08.908+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-15T16:37:08.917+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-03-15T16:37:08.920+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=dbt_transform, task_id=dbt_debug, execution_date=20260315T163100, start_date=20260315T163704, end_date=20260315T163708
+[2026-03-15T16:37:08.928+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 32 for task dbt_debug (Bash command failed. The command returned a non-zero exit code 1.; 544)
+[2026-03-15T16:37:08.976+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-03-15T16:37:08.997+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-15T16:37:09.001+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

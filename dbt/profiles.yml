@@ -1,0 +1,12 @@
+my_project:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres-db
+      port: 5432
+      database: sqlpad
+      user: sqlpad
+      password: sqlpad
+      schema: gold
+      threads: 4

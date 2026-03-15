@@ -6,9 +6,9 @@ services:
     container_name: eventsim_generator
     # network_mode: host
     restart: "no"
-    mem_limit: 2g
+    mem_limit: 1g
     cpus: 5
-    memswap_limit: 2g
+    memswap_limit: 1g
 
     volumes:
       - ./eventsim/data:/opt/eventsim/data
@@ -337,6 +337,7 @@ services:
     ports:
       - "8082:8080"
     environment:
+      _PIP_ADDITIONAL_REQUIREMENTS: "dbt-postgres==1.7.0"
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres-airflow/airflow
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
@@ -363,6 +364,7 @@ services:
       postgres-airflow:
         condition: service_healthy
     environment:
+      _PIP_ADDITIONAL_REQUIREMENTS: "dbt-postgres==1.7.0"
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres-airflow/airflow
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
