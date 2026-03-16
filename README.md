@@ -5,4 +5,5 @@
 ![Data Pipeline Architecture](images/Data_Architecture.png)
 
 ## Description
-Data Source: Eventsim là một dự án mã nguồn mở dùng để mô phỏng dữ liệu sự kiện (event data) của một ứng dụng nghe nhạc trực tuyến tương tự như Spotify. Dự án này được phát triển để tạo ra các log hoạt động của người dùng như đăng nhập, nghe bài hát, chuyển bài, tạm dừng, hoặc thêm bài vào playlist. Các sự kiện này được sinh ra liên tục theo thời gian, giống với cách dữ liệu thực tế được tạo ra trong các hệ thống web hoặc mobile application.
+This project is inspired by the [Streamify](https://github.com/ankurchavda/streamify), which demonstrates a real-time data engineering pipeline for analyzing music streaming events. In this work, we redesign the architecture so that the entire system can run **fully on a local machine using Docker**. This allows users to easily experiment with technologies such as Kafka, Spark, Airflow, dbt, MinIO, and PostgreSQL without relying on cloud infrastructure.
+
