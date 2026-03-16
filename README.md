@@ -1,1 +1,2 @@
-![Data Pipeline Architecture](images/architecture.png)
+![Data Pipeline Architecture](images/Data_Architecture.png)
+
