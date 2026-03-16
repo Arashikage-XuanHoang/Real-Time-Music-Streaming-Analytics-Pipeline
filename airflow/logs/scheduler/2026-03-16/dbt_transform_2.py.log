@@ -1,0 +1,105 @@
+[2026-03-16T01:46:23.269+0000] {processor.py:161} INFO - Started process (PID=241) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:46:23.269+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:46:23.271+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:46:23.270+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:46:23.299+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:46:23.570+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:46:23.570+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:46:23.588+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:46:23.588+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:45:00+00:00, run_after=2026-03-16 01:46:00+00:00
+[2026-03-16T01:46:23.603+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.338 seconds
+[2026-03-16T01:46:53.722+0000] {processor.py:161} INFO - Started process (PID=273) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:46:53.722+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:46:53.723+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:46:53.723+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:46:53.732+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:46:53.762+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:46:53.762+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:46:53.782+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:46:53.781+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:46:00+00:00, run_after=2026-03-16 01:47:00+00:00
+[2026-03-16T01:46:53.794+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.077 seconds
+[2026-03-16T01:47:23.849+0000] {processor.py:161} INFO - Started process (PID=300) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:47:23.850+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:47:23.852+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:47:23.851+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:47:23.863+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:47:23.890+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:47:23.890+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:47:23.911+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:47:23.911+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:47:00+00:00, run_after=2026-03-16 01:48:00+00:00
+[2026-03-16T01:47:23.927+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.084 seconds
+[2026-03-16T01:47:54.069+0000] {processor.py:161} INFO - Started process (PID=310) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:47:54.070+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:47:54.071+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:47:54.071+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:47:54.080+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:47:54.103+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:47:54.103+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:47:54.121+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:47:54.120+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:47:00+00:00, run_after=2026-03-16 01:48:00+00:00
+[2026-03-16T01:47:54.142+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.077 seconds
+[2026-03-16T01:48:24.187+0000] {processor.py:161} INFO - Started process (PID=337) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:48:24.187+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:48:24.189+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:48:24.188+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:48:24.199+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:48:24.223+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:48:24.223+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:48:24.243+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:48:24.243+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:48:00+00:00, run_after=2026-03-16 01:49:00+00:00
+[2026-03-16T01:48:24.258+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.077 seconds
+[2026-03-16T01:48:54.399+0000] {processor.py:161} INFO - Started process (PID=347) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:48:54.400+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:48:54.402+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:48:54.401+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:48:54.416+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:48:54.446+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:48:54.445+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:48:54.471+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:48:54.471+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:48:00+00:00, run_after=2026-03-16 01:49:00+00:00
+[2026-03-16T01:48:54.509+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.115 seconds
+[2026-03-16T01:49:24.658+0000] {processor.py:161} INFO - Started process (PID=374) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:49:24.659+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:49:24.660+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:49:24.660+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:49:24.672+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:49:24.707+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:49:24.707+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:49:24.733+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:49:24.732+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:49:00+00:00, run_after=2026-03-16 01:50:00+00:00
+[2026-03-16T01:49:24.750+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.098 seconds
+[2026-03-16T01:49:54.781+0000] {processor.py:161} INFO - Started process (PID=384) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:49:54.781+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:49:54.783+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:49:54.782+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:49:54.793+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:49:54.817+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:49:54.817+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:49:54.838+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:49:54.837+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:49:00+00:00, run_after=2026-03-16 01:50:00+00:00
+[2026-03-16T01:49:54.853+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.077 seconds
+[2026-03-16T01:50:25.045+0000] {processor.py:161} INFO - Started process (PID=411) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:50:25.048+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:50:25.054+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:50:25.053+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:50:25.100+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:50:25.156+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:50:25.155+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:50:25.186+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:50:25.186+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:50:00+00:00, run_after=2026-03-16 01:51:00+00:00
+[2026-03-16T01:50:25.209+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.199 seconds
+[2026-03-16T01:50:55.330+0000] {processor.py:161} INFO - Started process (PID=421) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:50:55.330+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:50:55.331+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:50:55.331+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:50:55.341+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:50:55.364+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:50:55.363+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:50:55.383+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:50:55.383+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:50:00+00:00, run_after=2026-03-16 01:51:00+00:00
+[2026-03-16T01:50:55.400+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.076 seconds
+[2026-03-16T01:51:25.554+0000] {processor.py:161} INFO - Started process (PID=448) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:51:25.555+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:51:25.557+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:51:25.556+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:51:25.568+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:51:25.605+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:51:25.605+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:51:25.631+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:51:25.631+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:51:00+00:00, run_after=2026-03-16 01:52:00+00:00
+[2026-03-16T01:51:25.649+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.101 seconds
+[2026-03-16T01:51:55.689+0000] {processor.py:161} INFO - Started process (PID=458) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:51:55.690+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:51:55.691+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:51:55.691+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:51:55.702+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:51:55.725+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:51:55.725+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:51:55.744+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:51:55.744+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:51:00+00:00, run_after=2026-03-16 01:52:00+00:00
+[2026-03-16T01:51:55.761+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.077 seconds
+[2026-03-16T01:52:25.888+0000] {processor.py:161} INFO - Started process (PID=485) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:52:25.889+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:52:25.891+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:52:25.891+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:52:25.903+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:52:25.941+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:52:25.941+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:52:25.964+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:52:25.964+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:52:00+00:00, run_after=2026-03-16 01:53:00+00:00
+[2026-03-16T01:52:25.979+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.097 seconds
+[2026-03-16T01:52:56.018+0000] {processor.py:161} INFO - Started process (PID=495) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:52:56.019+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:52:56.020+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:52:56.020+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:52:56.033+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:52:56.062+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:52:56.061+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:52:56.083+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:52:56.083+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:52:00+00:00, run_after=2026-03-16 01:53:00+00:00
+[2026-03-16T01:52:56.103+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.091 seconds
+[2026-03-16T01:53:26.191+0000] {processor.py:161} INFO - Started process (PID=522) to work on /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:53:26.191+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_transform_2.py for tasks to queue
+[2026-03-16T01:53:26.193+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:53:26.192+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:53:26.204+0000] {processor.py:840} INFO - DAG(s) 'dbt_raw_to_gold' retrieved from /opt/airflow/dags/dbt_transform_2.py
+[2026-03-16T01:53:26.230+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:53:26.229+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-16T01:53:26.253+0000] {logging_mixin.py:188} INFO - [2026-03-16T01:53:26.252+0000] {dag.py:3954} INFO - Setting next_dagrun for dbt_raw_to_gold to 2026-03-16 01:53:00+00:00, run_after=2026-03-16 01:54:00+00:00
+[2026-03-16T01:53:26.271+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_transform_2.py took 0.086 seconds
